@@ -13,7 +13,7 @@ const Home = async () => {
       <div className="flex justify-between items-center mb-4">
         <h1 className="font-semibold text-jet text-xl">Clubs Destacados</h1>
         <Link
-          href="/clubs"
+          href="/club/list"
           className="text-sm font-light text-jet flex items-center gap-1"
         >
           <span>Ver todos</span>
@@ -37,7 +37,7 @@ const Home = async () => {
       <div className="flex justify-between items-center mb-4 mt-10">
         <h1 className="font-semibold text-jet text-xl">Próximos Pozos</h1>
         <Link
-          href="/players/request"
+          href="/tournament/list"
           className="text-sm font-light text-jet flex items-center gap-1"
         >
           <span>Ver todos</span>

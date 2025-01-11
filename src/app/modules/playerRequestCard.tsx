@@ -1,6 +1,7 @@
 import dayjs from 'dayjs';
 import 'dayjs/locale/es';
 import { Calendar, Clock, MapPin } from 'lucide-react';
+import Link from 'next/link';
 
 import { Button } from '@/components/ui/button';
 import { PlayerRequest } from '@/lib/definitions';
@@ -77,7 +78,9 @@ export const PlayerRequestCard = (props: PlayerRequest) => {
       </span>
 
       <div className="space-y-3 border-t pt-2">
-        <p className="font-semibold text-sm text-jet">{club}</p>
+        <Link href={`/club/${id}`}>
+          <p className="font-semibold text-sm text-jet">{club}</p>
+        </Link>
         <div className="flex items-center gap-2 text-jet/[0.8]">
           <MapPin className="h-4 w-4" />
           <span className="text-sm">{`${state}, ${city}`}</span>
