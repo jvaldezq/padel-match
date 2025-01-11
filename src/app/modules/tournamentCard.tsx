@@ -1,6 +1,7 @@
 import dayjs from 'dayjs';
 import { Calendar, Clock, MapPin } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { Button } from '@/components/ui/button';
 import { Tournament } from '@/lib/definitions';
@@ -108,9 +109,11 @@ export const TournamentCard = (props: Tournament) => {
           </div>
         </div>
 
-        <Button className="mt-4 w-full bg-rich-black text-white py-2 rounded-lg hover:bg-jet transition-colors duration-200">
-          Ver mas
-        </Button>
+        <Link href={`/tournament/${id}`}>
+          <Button className="mt-4 w-full bg-rich-black text-white py-2 rounded-lg hover:bg-jet transition-colors duration-200">
+            Ver mas
+          </Button>
+        </Link>
       </div>
     </div>
   );

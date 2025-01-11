@@ -1,9 +1,9 @@
-import { FeatureClubs } from '@/app/modules/featureClubs';
+import { FeatureTournaments } from '@/app/modules/featureTournaments';
 
 const Clubs = async () => {
   return (
     <main className="max-w-screen-lg mx-auto p-4 mb-28">
-      <FeatureClubs />
+      <FeatureTournaments />
     </main>
   );
 };

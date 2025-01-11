@@ -99,9 +99,11 @@ export const PlayerRequestCard = (props: PlayerRequest) => {
         </div>
       </div>
 
-      <Button className="mt-4 w-full bg-rich-black text-white py-2 rounded-lg hover:bg-jet transition-colors duration-200">
-        Ver mas
-      </Button>
+      <Link href={`/player/${id}`}>
+        <Button className="mt-4 w-full bg-rich-black text-white py-2 rounded-lg hover:bg-jet transition-colors duration-200">
+          Ver mas
+        </Button>
+      </Link>
     </div>
   );
 };

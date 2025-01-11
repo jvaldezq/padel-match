@@ -25,7 +25,7 @@ const Home = async () => {
       <div className="flex justify-between items-center mb-4 mt-10">
         <h1 className="font-semibold text-jet text-xl">Se Buscan Jugadores</h1>
         <Link
-          href="/players/request"
+          href="/player/list"
           className="text-sm font-light text-jet flex items-center gap-1"
         >
           <span>Ver todos</span>
