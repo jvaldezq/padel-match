@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL")
+  directUrl = env("POSTGRES_URL_NON_POOLING")
+}
+
+model Bill {
+  id        String   @id @default(uuid())
+  name      String   @unique
+  category  String
+  type      String
+  amount    Float
+  accumulatedAmount    Float
+  currency  String
+  isPublic  Boolean @default(false)
+  expenses  Expense[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+
+model Expense {
+  id              String   @id @default(uuid())
+  description     String?
+  currency        String
+  paymentMethod   String
+  amount          Float
+  billId          String
+  bill            Bill @relation(fields: [billId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
